@@ -2,7 +2,7 @@
   import emotion from "emotion/dist/emotion.umd.min.js";
   const { css } = emotion;
   export let backdropCSS = "",
-    backdropCSSMobile = "background-color: green; opacity: 0.2;",
+    backdropCSSMobile = "background-color: black; opacity: 0.2;",
     align = "left",
     breakpoint = "768px",
     show = true,
