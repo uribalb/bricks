@@ -1,6 +1,7 @@
 <script>
   export let show,
     closeOnClick,
+    openOnHover,
     xOffset = "0",
     yOffset = "100%",
     xAlign = "left",
@@ -18,6 +19,7 @@
   .menu {
     position: absolute;
     min-width: 100%;
+    z-index: 100;
   }
 
   .backdrop {
@@ -36,12 +38,13 @@
 <div style="position: relative; display: inline-block;" class:show>
   <span
     class="activator"
+    on:hover={() => {
+      openOnHover && (show = true);
+    }}
     on:click={() => {
       show = true;
     }}>
-    <slot name="activator">
-      &#9776;
-    </slot>
+    <slot name="activator">&#9776;</slot>
   </span>
 
   {#if show}
