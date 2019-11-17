@@ -1,4 +1,5 @@
 <script>
+import {unusedProps} from './utils'
   import emotion from "emotion/dist/emotion.umd.min.js";
   const { css } = emotion;
   export let backdropCSS = "",
@@ -22,7 +23,6 @@
     activatorModeMobile,
     classPrefix = "";
 
-  const navClass = $$props.class;
 
   const inset0 = `position: absolute;    top: 0;    right: 0;    bottom: 0;    left: 0;`;
 
@@ -276,7 +276,7 @@
   </slot>
 
   <!-- Navigation -->
-  <aside class="{aside} {navClass} {classPrefix}aside">
+  <aside {...unusedProps($$props, ['class'])} class="{aside} {classPrefix}aside {$$props.class || ''}" >
 
     <aside class="{asideInner} {classPrefix}aside-inner">
       <!-- Slot -->

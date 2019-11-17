@@ -1,7 +1,7 @@
 <script>
   import { getContext } from "svelte";
   import { TABS } from "./Tabs.svelte";
-  export let preserve
+  export let preserve = false
 
   const panel = {};
   const { registerPanel, selectedPanel } = getContext(TABS);

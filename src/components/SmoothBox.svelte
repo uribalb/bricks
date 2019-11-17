@@ -1,29 +1,33 @@
 <script>
+  import { unusedProps } from "./utils.js";
   export let active,
-    startTime,
-    endTime,
     widthProp = "width",
     heightProp = "height",
-    childHeight = "inherited",
-    childWidth = "inherited",
-    style = '';
-
+    slotHeight = "inherited",
+    slotWidth = "inherited",
+    startTime = false,
+    endTime = false
   active = !startTime;
 
   if (startTime) setTimeout(() => (active = true), startTime);
   if (endTime) setTimeout(() => (active = false), timeout);
 
   $: heightCSS =
-    active && heightProp ? `${heightProp}: ${childHeight}px; ` : " ";
-  $: widthCSS = active && widthProp ? `${widthProp}: ${childWidth}px; ` : " ";
+    active && heightProp ? `${heightProp}: ${slotHeight}px; ` : " ";
+  $: widthCSS = active && widthProp ? `${widthProp}: ${slotWidth}px; ` : " ";
+
 </script>
 
-<div style="{heightCSS}{widthCSS} {style}" class="smoothbox {$$props.class || ''}">
-  <div bind:clientHeight={childHeight} bind:clientWidth={childWidth}>
+<style>
+  .smoothbox {
+    overflow: hidden;
+  }
+</style>
+
+<div style="{heightCSS}{widthCSS} {$$props.style || ''}" class="smoothbox {$$props.class || ''}" {...unusedProps($$props, ['class', 'style'])}>
+  <div bind:clientHeight={slotHeight} bind:clientWidth={slotWidth}>
     <slot>
       <!-- optional fallback -->
     </slot>
   </div>
 </div>
-
-<style>.smoothbox {overflow:hidden}</style>
