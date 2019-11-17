@@ -100,6 +100,7 @@ import {unusedProps} from './utils'
      {
       ${inset0}
       ${oppositeAlign}: auto;
+      z-index: 10;
       transition: ${transition};
       transition-property: margin, width, transform;
       height: 100%;
@@ -166,6 +167,7 @@ import {unusedProps} from './utils'
       transition: ${transition};
       position: absolute;
       top: 0;
+      z-index: 10;
       display: none;
       cursor: pointer;
       pointer-events: none;
@@ -275,7 +277,7 @@ import {unusedProps} from './utils'
       on:click={toggleDesktop} />
   </slot>
 
-  <!-- Navigation -->
+  <!-- Aside -->
   <aside {...unusedProps($$props, ['class'])} class="{aside} {classPrefix}aside {$$props.class || ''}" >
 
     <aside class="{asideInner} {classPrefix}aside-inner">
