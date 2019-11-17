@@ -5,8 +5,8 @@
     heightProp = "height",
     slotHeight = "inherited",
     slotWidth = "inherited",
-    startTime = false,
-    endTime = false
+    startTime = 0,
+    endTime = 0
   active = !startTime;
 
   if (startTime) setTimeout(() => (active = true), startTime);
