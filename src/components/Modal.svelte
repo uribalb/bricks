@@ -24,6 +24,7 @@
     bottom: 0;
     min-height: 100%;
     overflow: hidden;
+    z-index: 100;
   `;
 
   $: modalWrapper = css`
