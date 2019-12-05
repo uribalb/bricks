@@ -2,7 +2,7 @@
   "name": "@sveltech/bricks",
   "svelte": "src/index.js",
   "module": "index.mjs",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
