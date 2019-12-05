@@ -1,5 +1,6 @@
 <script>
-  import { css } from "emotion/dist/emotion.umd.min.js";
+  import emotion from "emotion/dist/emotion.umd.min.js";
+  const { css } = emotion;
   import { fade } from "svelte/transition";
   import { onDestroy } from "svelte";
   export let backdropCSS = "background-color: #000; opacity: 0.2",
