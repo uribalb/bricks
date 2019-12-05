@@ -1,7 +1,6 @@
 <script>
-import {unusedProps} from './utils'
-  import emotion from "emotion/dist/emotion.umd.min.js";
-  const { css } = emotion;
+  import { unusedProps } from "./utils";
+  import { css } from "emotion/dist/emotion.umd.min.js";
   export let backdropCSS = "",
     backdropCSSMobile = "background-color: black; opacity: 0.2;",
     align = "left",
@@ -22,7 +21,6 @@ import {unusedProps} from './utils'
     activatorMode = "outside",
     activatorModeMobile,
     classPrefix = "";
-
 
   const inset0 = `position: absolute;    top: 0;    right: 0;    bottom: 0;    left: 0;`;
 
@@ -181,7 +179,8 @@ import {unusedProps} from './utils'
           display: inline;
         }
         .${cssId}.mobile-activator-follow & {
-          transform: translateX(${plus+widthCollapsedMobile}) translateX(${minus}100%);
+          transform: translateX(${plus + widthCollapsedMobile})
+            translateX(${minus}100%);
         }
         .${cssId}.mobile-activator-outside & {
           transform: translateX(0);
@@ -190,7 +189,7 @@ import {unusedProps} from './utils'
         /** SHOW **/
         .${cssId}.show-mobile.mobile-activator-outside &,
         .${cssId}.show-mobile.mobile-activator-follow & {
-          transform: translateX(${plus+widthMobile}) translateX(${minus}100%);
+          transform: translateX(${plus + widthMobile}) translateX(${minus}100%);
         }
         /**relative width fix**/
         .${cssId}.show-mobile.mobile-activator-outside.mobile-width-pct &,
@@ -205,7 +204,8 @@ import {unusedProps} from './utils'
           display: inline;
         }
         .${cssId}.desktop-activator-follow & {
-          transform: translateX(${plus+widthCollapsed}) translateX(${minus}100%);
+          transform: translateX(${plus + widthCollapsed})
+            translateX(${minus}100%);
         }
         .${cssId}.desktop-activator-outside & {
           transform: translateX(0);
@@ -214,10 +214,10 @@ import {unusedProps} from './utils'
         /** SHOW **/
         .${cssId}.show.desktop-activator-outside &,
         .${cssId}.show.desktop-activator-follow & {
-          transform: translateX(${plus+width}) translateX(${minus}100%);
+          transform: translateX(${plus + width}) translateX(${minus}100%);
         }
         /**relative width fix**/
-        .${cssId}.show.desktop-activator-outside.desktop-width-pct &, 
+        .${cssId}.show.desktop-activator-outside.desktop-width-pct &,
         .${cssId}.show.desktop-activator-follow.desktop-width-pct & {
           ${align}: ${width};
           transform: translateX(${minus}100%);
@@ -278,7 +278,10 @@ import {unusedProps} from './utils'
   </slot>
 
   <!-- Aside -->
-  <aside {...unusedProps($$props, ['class'])} class="{aside} {classPrefix}aside {$$props.class || ''}" >
+  <aside
+    {...unusedProps($$props, ['class'])}
+    class="{aside}
+    {classPrefix}aside {$$props.class || ''}">
 
     <aside class="{asideInner} {classPrefix}aside-inner">
       <!-- Slot -->
