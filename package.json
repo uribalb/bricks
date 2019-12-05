@@ -1,5 +1,5 @@
 {
-  "name": "SvelteBricks",
+  "name": "bricks",
   "svelte": "src/index.js",
   "module": "index.mjs",
   "main": "index.js",
@@ -25,5 +25,17 @@
     "src",
     "index.mjs",
     "index.js"
-  ]
+  ],
+  "description": "*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sveltech/bricks.git"
+  },
+  "author": "jakobrosenberg@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sveltech/bricks/issues"
+  },
+  "homepage": "https://github.com/sveltech/bricks#readme"
 }
