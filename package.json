@@ -3,7 +3,8 @@
   "svelte": "src/index.js",
   "module": "index.mjs",
   "scripts": {
-    "build": "rollup -c",
+    "build": "",
+    "build-bak": "rollup -c",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
