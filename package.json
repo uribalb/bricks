@@ -16,7 +16,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "emotion": "^10.0.23"
+    "emotion": "^10.0.27"
   },
   "keywords": [
     "svelte"
@@ -27,7 +27,7 @@
     "index.js"
   ],
   "description": "*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*",
-  "version": "1.0.1-1",
+  "version": "1.0.1-2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sveltech/bricks.git"
