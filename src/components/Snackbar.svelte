@@ -1,7 +1,7 @@
 <script>
   import { onDestroy } from "svelte";
   import DefaultTemplate from "./_snackbarTemplate.svelte";
-  import emotion from "emotion/core";
+  import emotion from "emotion/dist/emotion.umd.min.js";
   import { crossfade, fade } from "svelte/transition";
   import { flip } from "svelte/animate";
   const { css } = emotion;

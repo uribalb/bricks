@@ -1,6 +1,6 @@
 <script>
   import { unusedProps } from "./utils";
-  import emotion from "emotion/core";
+  import emotion from "emotion/dist/emotion.umd.min.js";
   const { css } = emotion;
   export let backdropCSS = "",
     backdropCSSMobile = "background-color: black; opacity: 0.2;",
