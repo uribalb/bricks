@@ -1,5 +1,5 @@
 <script>
-  import emotion from "emotion/dist/emotion.umd.min.js";
+  import emotion from "emotion/core";
   const { css } = emotion;
   import { fade } from "svelte/transition";
   import { onDestroy } from "svelte";
