@@ -4,7 +4,7 @@ import { current_component } from 'svelte/internal';
 export function unusedProps(props, ignores = []) {
     const unusedProps = {}
     Object.entries(props).forEach(([prop, value]) => {
-        if (!current_component.$$.props.includes(prop)
+        if (!current_component.$$.props[prop]
         && !ignores.includes(prop)
         && !prop.match(/^\$/))
             unusedProps[prop] = value
